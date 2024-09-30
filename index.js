@@ -9,7 +9,7 @@ class MudiExperience{
     };
 
     /** Conect mudiServer  ✔️ */
-    async conectServer(skuNumber){
+    async conectServer(skuNumber){ 
         
         const myBody = {"skus":[skuNumber]};
         this.skuNumber = skuNumber;
