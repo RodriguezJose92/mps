@@ -326,19 +326,19 @@ const mudiExperience = new MudiExperience();
 
 let verifycontent = 0;
 
-/** verify DomElement */
 async function verifyDomElement() {
     verifycontent++;
 
     let fatherContainer = document.querySelector('#container-product-gallery');
-    let skuNumber = document.querySelector('#product-partnum')?.value;
+    let rawSku = document.querySelector('#product-partnum')?.value || '';
+    let skuNumber = rawSku.replace(/\s+/g, '') + '_MPS';
 
     if (verifycontent >= 1500) {
-        console.warn(`Mudi Warning: El elemento HTML no se ha encontrado en el DOM`);
+        console.warn(Mudi Warning: El elemento HTML no se ha encontrado en el DOM);
         return;
     }
 
-    if (!fatherContainer || !skuNumber) {
+    if (!fatherContainer || !rawSku) {
         requestAnimationFrame(verifyDomElement);
         return;
     }
@@ -349,5 +349,4 @@ async function verifyDomElement() {
 setTimeout(async () => {
     await verifyDomElement();
 }, 2000);
-
 
