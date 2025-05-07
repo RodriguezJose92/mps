@@ -29,7 +29,7 @@ class MudiExperience{
             response = await request.json();
             this.dataServer = response.data[0];
     
-        } catch (error) {console.error(`Mudi Error:\n${error}`)}
+        } catch (error) {.error(`Mudi Error:\n${error}`)}
 
     };
 
@@ -334,7 +334,7 @@ async function verifyDomElement() {
     let skuNumber = rawSku.replace(/\s+/g, '') + '_MPS';
 
     if (verifycontent >= 1500) {
-        console.warn(Mudi Warning: El elemento HTML no se ha encontrado en el DOM);
+        console.warn('Mudi Warning: El elemento HTML no se ha encontrado en el DOM');
         return;
     }
 
