@@ -29,7 +29,7 @@ class MudiExperience{
             response = await request.json();
             this.dataServer = response.data[0];
     
-        } catch (error) {.error(`Mudi Error:\n${error}`)}
+        } catch (error) {error(`Mudi Error:\n${error}`)}
 
     };
 
